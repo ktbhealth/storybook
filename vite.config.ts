@@ -13,6 +13,14 @@ export default defineConfig({
       "use-sync-external-store/shim/with-selector",
       "use-sync-external-store/shim/with-selector.js",
       "use-sync-external-store/with-selector.js",
+      // mermaid (via @streamdown/mermaid in @ktbhealth/ui ai-elements) is
+      // served unbundled and its CJS deps (dayjs, debug, katex, cytoscape
+      // plugins) break in the browser. It's a direct devDep + dedupe so all
+      // importers share one copy that esbuild prebundles with its deps.
+      "mermaid",
     ],
+  },
+  resolve: {
+    dedupe: ["mermaid"],
   },
 });
