@@ -27,7 +27,7 @@ export function AiTestResultsDemo() {
           <TestResultsSummary />
           <TestResultsDuration />
         </TestResultsHeader>
-        <TestResultsProgress className="px-4 pt-3" />
+        <TestResultsProgress />
         <TestResultsContent>
           <TestSuite name="vitals.test.ts" status="failed">
             <TestSuiteName />

@@ -95,7 +95,7 @@ export function AppShell() {
           ))}
         </nav>
         <div className="border-t px-4 py-3 text-[11px] text-muted-foreground">
-          @ktbhealth/ui v0.1.0
+          @ktbhealth/ui v0.1.2
         </div>
       </aside>
       <main className="min-w-0 flex-1">
