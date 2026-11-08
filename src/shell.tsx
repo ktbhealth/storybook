@@ -146,6 +146,12 @@ export function ComponentLink({
   );
 }
 
-export function DemoStage({ children }: { children: ReactNode }) {
-  return <div className="rounded-xl border bg-card p-8 text-card-foreground">{children}</div>;
+export function DemoStage({ children, className }: { children: ReactNode; className?: string }) {
+  return (
+    <div
+      className={`rounded-xl border bg-card p-8 text-card-foreground${className ? ` ${className}` : ""}`}
+    >
+      {children}
+    </div>
+  );
 }

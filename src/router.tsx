@@ -24,7 +24,7 @@ const componentsIndexRoute = createRoute({
 
 const componentRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/components/$name",
+  path: "/components/$",
   component: ComponentPage,
 });
 

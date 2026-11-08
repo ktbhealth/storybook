@@ -7,9 +7,6 @@ export default defineConfig({
   optimizeDeps: {
     // @base-ui/utils .mjs files named-import the CJS shim; the optimizer
     // must interop it or dev serves "no export named useSyncExternalStore".
-    include: [
-      "use-sync-external-store/shim",
-      "use-sync-external-store/shim/with-selector",
-    ],
+    include: ["use-sync-external-store/shim", "use-sync-external-store/shim/with-selector"],
   },
 });
