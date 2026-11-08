@@ -1,4 +1,5 @@
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
+import { Suspense } from "react";
 import { describe, expect, it } from "vitest";
 import { CATALOG } from "../catalog/manifest";
 import { DEMOS } from "./index";
@@ -11,6 +12,8 @@ const SKIP_IN_JSDOM = new Set<string>([
   "ai-elements/persona",
   // iframe + console-message interception can't be exercised in jsdom.
   "ai-elements/web-preview",
+  // media-chrome needs real HTMLMediaElement playback APIs jsdom lacks.
+  "ai-elements/audio-player",
 ]);
 
 const covered = CATALOG.filter((entry) => !SKIP_IN_JSDOM.has(entry.id));
@@ -29,9 +32,16 @@ describe("catalog demo registry", () => {
 });
 
 describe.each(covered.map((entry) => [entry.id, entry] as const))("demo %s", (id) => {
-  it("renders without throwing", () => {
+  it("renders without throwing", async () => {
     const Demo = DEMOS[id];
     expect(Demo).toBeDefined();
-    expect(() => render(<Demo />)).not.toThrow();
+    const { container } = render(
+      <Suspense fallback={null}>
+        <Demo />
+      </Suspense>,
+    );
+    await waitFor(() => expect(container.children.length).toBeGreaterThan(0), {
+      timeout: 15000,
+    });
   });
 });

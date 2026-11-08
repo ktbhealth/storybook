@@ -24,9 +24,14 @@ export default defineConfig({
       // unified/remark tree whose CJS leaves (extend, debug, ...) break
       // when served raw. Prebundling the entry interops the whole graph.
       "streamdown",
+      // @rive-app/react-webgl2 (persona demo) is CJS; served raw its named
+      // exports (useRive, ...) fail and take down the whole demos chunk.
+      "@rive-app/react-webgl2",
+      // ansi-to-react (via ai-elements/terminal) is CJS.
+      "ansi-to-react",
     ],
   },
   resolve: {
-    dedupe: ["mermaid", "debug", "streamdown"],
+    dedupe: ["mermaid", "debug", "streamdown", "@rive-app/react-webgl2", "ansi-to-react"],
   },
 });

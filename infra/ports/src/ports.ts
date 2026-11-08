@@ -7,6 +7,8 @@ export interface StaticSiteSpec {
   /** Shell command that produces `outdir`. Provider supplies a default. */
   readonly command?: string;
   readonly outdir: string;
+  /** Custom hostname to attach to the deployed Worker (e.g. `"app.example.com"`). */
+  readonly domain?: string;
   /** Serve index.html for unknown paths (client-side routing). */
   readonly spa?: boolean;
   /**
