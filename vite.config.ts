@@ -18,9 +18,11 @@ export default defineConfig({
       // plugins) break in the browser. It's a direct devDep + dedupe so all
       // importers share one copy that esbuild prebundles with its deps.
       "mermaid",
+      // micromark (via streamdown) imports debug — CJS-only package.
+      "debug",
     ],
   },
   resolve: {
-    dedupe: ["mermaid"],
+    dedupe: ["mermaid", "debug"],
   },
 });
