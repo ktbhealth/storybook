@@ -30,7 +30,7 @@ class PreviewBoundary extends ReactComponent<{ children: ReactNode }, { error: b
  * IntersectionObserver so the index page doesn't render all ~115 demos
  * (mermaid, charts, WebGL) up front; clipped to a fixed-height window.
  */
-export function ComponentPreview({ Demo }: { Demo: ComponentType }) {
+export function ComponentPreview({ Demo, className }: { Demo: ComponentType; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -53,7 +53,7 @@ export function ComponentPreview({ Demo }: { Demo: ComponentType }) {
   return (
     <div
       ref={ref}
-      className="pointer-events-none h-44 select-none overflow-hidden rounded-md border bg-muted/30"
+      className={`pointer-events-none w-full select-none overflow-hidden rounded-md border bg-muted/30 ${className ?? "h-44"}`}
     >
       {visible ? (
         <PreviewBoundary>
