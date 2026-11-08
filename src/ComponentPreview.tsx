@@ -53,12 +53,14 @@ export function ComponentPreview({ Demo }: { Demo: ComponentType }) {
   return (
     <div
       ref={ref}
-      className="pointer-events-none h-36 select-none overflow-hidden rounded-md border bg-muted/30"
+      className="pointer-events-none h-44 select-none overflow-hidden rounded-md border bg-muted/30"
     >
       {visible ? (
         <PreviewBoundary>
           <Suspense fallback={null}>
-            <div className="origin-top-left scale-[0.85] p-3">
+            {/* DemoStage renders its own card chrome (border, p-8); strip it
+                so the demo fills the preview instead of nesting a card. */}
+            <div className="h-full w-full overflow-hidden p-3 [&_[data-demo-stage]]:rounded-none [&_[data-demo-stage]]:border-0 [&_[data-demo-stage]]:bg-transparent [&_[data-demo-stage]]:p-3 [&_[data-demo-stage]]:shadow-none">
               <Demo />
             </div>
           </Suspense>
