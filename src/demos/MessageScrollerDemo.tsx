@@ -22,21 +22,21 @@ export function MessageScrollerDemo() {
     <DemoStage className="p-0">
       <MessageScrollerProvider>
         <MessageScroller className="h-80 rounded-xl border">
-        <MessageScrollerViewport>
-          <MessageScrollerContent className="p-4">
-            {MSGS.map((m) => (
-              <MessageScrollerItem key={m.id} messageId={String(m.id)}>
-                <div
-                  className={`max-w-[75%] rounded-lg px-3 py-2 text-sm ${
-                    m.from === "user" ? "ml-auto bg-primary text-primary-foreground" : "bg-muted"
-                  }`}
-                >
-                  {m.text}
-                </div>
-              </MessageScrollerItem>
-            ))}
-          </MessageScrollerContent>
-        </MessageScrollerViewport>
+          <MessageScrollerViewport>
+            <MessageScrollerContent className="p-4">
+              {MSGS.map((m) => (
+                <MessageScrollerItem key={m.id} messageId={String(m.id)}>
+                  <div
+                    className={`max-w-[75%] rounded-lg px-3 py-2 text-sm ${
+                      m.from === "user" ? "ml-auto bg-primary text-primary-foreground" : "bg-muted"
+                    }`}
+                  >
+                    {m.text}
+                  </div>
+                </MessageScrollerItem>
+              ))}
+            </MessageScrollerContent>
+          </MessageScrollerViewport>
           <MessageScrollerButton />
         </MessageScroller>
       </MessageScrollerProvider>
