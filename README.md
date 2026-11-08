@@ -57,10 +57,10 @@ the installed package. It groups components into families:
   `attachment`, `bubble`, `message`, `questionnaire`, `trace`, `turnstile`, …)
 - **AI Elements** — the `ai-elements/*` chat/agent building blocks
 
-Component pages show a hand-written demo where one exists (`src/demos/`),
-otherwise the primary export is rendered with default props inside an error
-boundary. Components that need complex providers or required props will show
-a setup note instead.
+Every catalog entry has a real demo in `src/demos/` (generated where no
+hand-written demo exists). A render smoke test plus a registry test keep
+the catalog honest; only genuinely provider-bound components (WebGL
+persona, iframe preview) are skipped under jsdom.
 
 ## Blocks
 
