@@ -9,6 +9,7 @@ import {
 } from "react";
 import { CATALOG, type CatalogEntry } from "../catalog/manifest";
 import { DEMOS } from "../demos";
+import { CatalogIndexPage } from "./CatalogIndexPage";
 import { DemoStage, PageHeader } from "../shell";
 
 class ErrorBoundary extends ReactComponent<
@@ -75,6 +76,12 @@ export function ComponentPage() {
   const params = useParams({ strict: false }) as { _splat?: string };
   const id = params._splat ?? "";
   const entry = CATALOG.find((c) => c.id === id);
+
+  // The `/components/$` splat also matches `/components` itself (empty
+  // splat), outranking the index route — render the catalog there.
+  if (!id) {
+    return <CatalogIndexPage />;
+  }
 
   if (!entry) {
     return (
