@@ -5,6 +5,7 @@ import { CatalogIndexPage } from "./pages/CatalogIndexPage";
 import { ComponentPage } from "./pages/ComponentPage";
 import { BlocksIndexPage } from "./pages/BlocksIndexPage";
 import { BlockPage } from "./pages/BlockPage";
+import { TokensPage } from "./pages/TokensPage";
 
 const rootRoute = createRootRoute({
   component: AppShell,
@@ -14,6 +15,12 @@ const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
   component: OverviewPage,
+});
+
+const tokensRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/tokens",
+  component: TokensPage,
 });
 
 const componentsIndexRoute = createRoute({
@@ -42,6 +49,7 @@ const blockRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
+  tokensRoute,
   componentsIndexRoute,
   componentRoute,
   blocksIndexRoute,

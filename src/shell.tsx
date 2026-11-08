@@ -72,6 +72,7 @@ export function AppShell() {
         <nav className="flex-1 overflow-y-auto px-2 pb-6">
           <SectionLabel>Get started</SectionLabel>
           <NavLink to="/">Overview</NavLink>
+          <NavLink to="/tokens">Tokens</NavLink>
           <NavLink to="/components">All components</NavLink>
           <NavLink to="/blocks">Blocks</NavLink>
 

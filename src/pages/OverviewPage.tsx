@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Blocks, Component, Github } from "lucide-react";
+import { ArrowRight, Blocks, Component, Github, Palette } from "lucide-react";
 import { ComponentLink, PageHeader } from "../shell";
 import { BLOCKS } from "../blocks";
 import { CATALOG, FAMILY_LABELS, FAMILY_ORDER } from "../catalog/manifest";
@@ -12,7 +12,17 @@ export function OverviewPage() {
         description="A component catalog for the KTB Health design system, rendered from @ktbhealth/ui (React, Tailwind v4)."
       />
       <div className="space-y-10 px-8 py-8">
-        <section className="grid gap-4 sm:grid-cols-3">
+        <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <Link
+            to="/tokens"
+            className="rounded-xl border bg-card p-5 transition-colors hover:bg-muted/50"
+          >
+            <Palette className="size-5 text-primary" />
+            <p className="mt-3 text-sm font-semibold">Tokens</p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              Colors, radius, shadows, and fonts from <code className="text-xs">@ktbhealth/ui</code>
+            </p>
+          </Link>
           <Link
             to="/components"
             className="rounded-xl border bg-card p-5 transition-colors hover:bg-muted/50"
