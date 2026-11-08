@@ -2,6 +2,9 @@
   "name": "@ktbhealth/storybook",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "infra/*"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vp dev --port 3100",
@@ -10,7 +13,12 @@
     "check": "vp check",
     "lint": "vp lint",
     "format": "vp fmt",
-    "catalog:generate": "bun scripts/generate-catalog.mjs"
+    "catalog:generate": "bun scripts/generate-catalog.mjs",
+    "plan": "cuora run --env prod --config cuora.toml -- alchemy plan --stage prod",
+    "deploy": "cuora run --env prod --config cuora.toml -- alchemy deploy --stage prod -y",
+    "infra:dev": "alchemy dev",
+    "infra:deploy": "cuora run --env prod --config cuora.toml -- alchemy deploy --stage prod -y",
+    "infra:destroy": "alchemy destroy --stage prod"
   },
   "dependencies": {
     "@ktbhealth/ui": "github:ktbhealth/ui#v0.1.0@react",
@@ -22,12 +30,16 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "@alchemy.run/cloudflare": "2.0.0-beta.85",
+    "@ktb/infra-cloudflare": "workspace:*",
     "@testing-library/react": "^16",
     "@types/node": "^22.10.2",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^6.0.1",
+    "alchemy": "2.0.0-beta.85",
     "debug": "4.4.3",
+    "effect": "4.1.2",
     "jsdom": "^31",
     "mermaid": "11.17.2",
     "recharts": "3.8.0",
