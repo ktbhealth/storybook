@@ -1,0 +1,8 @@
+@import "@ktbhealth/ui/styles/globals.css";
+
+/* The shared globals ship tokens + theme but no content sources; scan this
+   app and the installed ui package sources so utilities used inside ui
+   components (bg-primary, text-muted-foreground, ...) are generated. */
+@source "./**/*.{ts,tsx}";
+@source "../node_modules/@ktbhealth/ui/packages/react/src/**/*.{ts,tsx}";
+@source "../node_modules/@ktbhealth/ui/packages/tailwind/src/**/*.css";
