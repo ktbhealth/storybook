@@ -20,9 +20,13 @@ export default defineConfig({
       "mermaid",
       // micromark (via streamdown) imports debug — CJS-only package.
       "debug",
+      // streamdown (via @ktbhealth/ui ai-elements markdown) pulls the
+      // unified/remark tree whose CJS leaves (extend, debug, ...) break
+      // when served raw. Prebundling the entry interops the whole graph.
+      "streamdown",
     ],
   },
   resolve: {
-    dedupe: ["mermaid", "debug"],
+    dedupe: ["mermaid", "debug", "streamdown"],
   },
 });
