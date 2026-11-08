@@ -15,6 +15,11 @@ export default Alchemy.Stack(
     const site = yield* deployStaticSite({
       name: "storybook",
       outdir: "dist",
+      // Client-routed SPA: unknown paths must serve index.html. The asset
+      // layer's notFoundHandling does not reach the deployed worker, so a
+      // tiny entrypoint in front of the assets handles the fallback.
+      spa: true,
+      main: "worker/spa.mjs",
     });
 
     return { url: site.url };

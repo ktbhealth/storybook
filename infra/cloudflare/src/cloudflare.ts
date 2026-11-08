@@ -11,6 +11,8 @@ export const cloudflareStaticSite: DeployStaticSite<Providers> = Effect.fnUntrac
     const site = yield* Cloudflare.Website.StaticSite(spec.name, {
       command: spec.command ?? BUILD_COMMAND,
       outdir: spec.outdir,
+      assets: spec.spa ? { notFoundHandling: "single-page-application" } : undefined,
+      main: spec.main,
     });
     return { url: site.url };
   },

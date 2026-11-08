@@ -7,6 +7,14 @@ export interface StaticSiteSpec {
   /** Shell command that produces `outdir`. Provider supplies a default. */
   readonly command?: string;
   readonly outdir: string;
+  /** Serve index.html for unknown paths (client-side routing). */
+  readonly spa?: boolean;
+  /**
+   * Optional Worker entrypoint placed in front of the assets. Unmatched
+   * requests fall through to it, which is the reliable way to implement
+   * SPA fallback when the platform's notFoundHandling is unavailable.
+   */
+  readonly main?: string;
 }
 
 export interface WorkerSpec extends StaticSiteSpec {
