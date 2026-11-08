@@ -1,4 +1,5 @@
 import { ComponentLink, PageHeader } from "../shell";
+import { ComponentPreview } from "../ComponentPreview";
 import { CATALOG, FAMILY_LABELS, FAMILY_ORDER } from "../catalog/manifest";
 import { DEMOS } from "../demos";
 
@@ -19,26 +20,30 @@ export function CatalogIndexPage() {
                 <span className="ml-2 font-normal text-muted-foreground">{items.length}</span>
               </h2>
               <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {items.map((c) => (
-                  <ComponentLink
-                    key={c.id}
-                    id={c.id}
-                    className="rounded-lg border bg-card px-3 py-2.5 transition-colors hover:bg-muted/50"
-                  >
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="truncate font-mono text-[13px]">{c.id}</span>
-                      {DEMOS[c.id] ? (
-                        <span className="shrink-0 rounded-full bg-primary/10 px-1.5 py-0.5 text-[10px] font-medium text-primary">
-                          demo
-                        </span>
-                      ) : null}
-                    </div>
-                    <p className="mt-0.5 truncate text-xs text-muted-foreground">
-                      {c.exports.slice(0, 4).join(", ")}
-                      {c.exports.length > 4 ? ` +${c.exports.length - 4}` : ""}
-                    </p>
-                  </ComponentLink>
-                ))}
+                {items.map((c) => {
+                  const Demo = DEMOS[c.id];
+                  return (
+                    <ComponentLink
+                      key={c.id}
+                      id={c.id}
+                      className="block rounded-lg border bg-card p-2 transition-colors hover:bg-muted/50"
+                    >
+                      {Demo ? <ComponentPreview Demo={Demo} /> : null}
+                      <div className="flex items-center justify-between gap-2 px-1.5 pb-1 pt-2">
+                        <span className="truncate font-mono text-[13px]">{c.id}</span>
+                        {Demo ? (
+                          <span className="shrink-0 rounded-full bg-primary/10 px-1.5 py-0.5 text-[10px] font-medium text-primary">
+                            demo
+                          </span>
+                        ) : null}
+                      </div>
+                      <p className="truncate px-1.5 pb-1.5 text-xs text-muted-foreground">
+                        {c.exports.slice(0, 4).join(", ")}
+                        {c.exports.length > 4 ? ` +${c.exports.length - 4}` : ""}
+                      </p>
+                    </ComponentLink>
+                  );
+                })}
               </div>
             </section>
           );
