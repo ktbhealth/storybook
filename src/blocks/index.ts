@@ -2,6 +2,8 @@ import type { ComponentType } from "react";
 import { AppointmentCard } from "./AppointmentCard";
 import { ConsultationSummaryCard } from "./ConsultationSummaryCard";
 import { PatientHeader } from "./PatientHeader";
+import { PlatformConsole } from "./PlatformConsole";
+import { PlatformShell } from "./PlatformShell";
 import { VisitHistoryRow } from "./VisitHistoryRow";
 
 export interface BlockEntry {
@@ -36,5 +38,17 @@ export const BLOCKS: BlockEntry[] = [
     title: "AppointmentCard",
     description: "Upcoming appointment card with provider and join action.",
     component: AppointmentCard,
+  },
+  {
+    id: "platform-console",
+    title: "PlatformConsole",
+    description: "Full app shell dashboard with sidebar, stats, chart and table.",
+    component: PlatformConsole,
+  },
+  {
+    id: "platform-shell",
+    title: "PlatformShell",
+    description: "Inset-variant app shell chrome with grouped navigation.",
+    component: PlatformShell,
   },
 ];
