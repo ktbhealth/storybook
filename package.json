@@ -21,7 +21,7 @@
     "infra:destroy": "alchemy destroy --stage prod"
   },
   "dependencies": {
-    "@ktbhealth/ui": "github:ktbhealth/ui#v0.1.2@react",
+    "@ktbhealth/ui": "github:ktbhealth/ui#v0.1.3@react",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "1.170.46",
     "lucide-react": "^0.544.0",
