@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { AppointmentCard } from "./AppointmentCard";
 import { ConsultationSummaryCard } from "./ConsultationSummaryCard";
+import { JobsBoard } from "./JobsBoard";
 import { PatientHeader } from "./PatientHeader";
 import { PlatformConsole } from "./PlatformConsole";
 import { PlatformShell } from "./PlatformShell";
@@ -38,6 +39,12 @@ export const BLOCKS: BlockEntry[] = [
     title: "AppointmentCard",
     description: "Upcoming appointment card with provider and join action.",
     component: AppointmentCard,
+  },
+  {
+    id: "jobs-board",
+    title: "JobsBoard",
+    description: "Background job board with live statuses, progress and metadata.",
+    component: JobsBoard,
   },
   {
     id: "platform-console",
