@@ -3,8 +3,12 @@ import { AppointmentCard } from "./AppointmentCard";
 import { ConsultationSummaryCard } from "./ConsultationSummaryCard";
 import { JobsBoard } from "./JobsBoard";
 import { PatientHeader } from "./PatientHeader";
+import { PatientList } from "./PatientList";
+import { PatientRecord } from "./PatientRecord";
+import { PatientRegistrationForm } from "./PatientRegistrationForm";
 import { PlatformConsole } from "./PlatformConsole";
 import { PlatformShell } from "./PlatformShell";
+import { QuickPatientCreate } from "./QuickPatientCreate";
 import { VisitHistoryRow } from "./VisitHistoryRow";
 
 export interface BlockEntry {
@@ -21,6 +25,30 @@ export const BLOCKS: BlockEntry[] = [
     title: "PatientHeader",
     description: "Patient identity card with contact details and quick actions.",
     component: PatientHeader,
+  },
+  {
+    id: "patient-list",
+    title: "PatientList",
+    description: "Patient registry list with search by name, CPF, or CNS and record badges.",
+    component: PatientList,
+  },
+  {
+    id: "patient-registration-form",
+    title: "PatientRegistrationForm",
+    description: "FHIR R4 + RNDS patient registration form with inline validation.",
+    component: PatientRegistrationForm,
+  },
+  {
+    id: "patient-record",
+    title: "PatientRecord",
+    description: "Patient record sections alongside the patient's consultations.",
+    component: PatientRecord,
+  },
+  {
+    id: "quick-patient-create",
+    title: "QuickPatientCreate",
+    description: "Pick or register a patient (name + age) when starting a consultation.",
+    component: QuickPatientCreate,
   },
   {
     id: "consultation-summary-card",
