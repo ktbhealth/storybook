@@ -20,8 +20,8 @@ const SWATCHES: { name: string; key: string; note: string }[] = [
   { name: "Primary", key: "primary", note: "--primary · logo tile, links, focus" },
   { name: "Ink", key: "ink", note: "--foreground · wordmark on light" },
   { name: "Accent", key: "accent", note: "--accent · light tint" },
-  { name: "Deep", key: "deep", note: "Brand hue, dark backgrounds" },
-  { name: "Deep alt", key: "deepAlt", note: "Brand hue, dark gradient end" },
+  { name: "Dark background", key: "backgroundDark", note: "--background · dark theme" },
+  { name: "Dark accent", key: "accentDark", note: "--accent · dark theme" },
 ];
 
 function DownloadLink({
@@ -148,7 +148,7 @@ export function BrandPage() {
               svg={logoHorizontalInverseSvg}
               png={logoHorizontalInversePng}
               file="ktb-health-logo-inverse"
-              surface={COLORS.deep ?? "#0b1a31"}
+              surface={COLORS.backgroundDark ?? "#161616"}
             />
             <LogoCard
               label="Horizontal · inverse on blue"
@@ -187,7 +187,7 @@ export function BrandPage() {
 
         <Section
           title="Colors"
-          description="Brand colors are converted from the design tokens. Tokens stay the source of truth in code; these hex values are for tools that cannot read CSS variables."
+          description="Every brand color is a design token converted to hex. Tokens stay the source of truth in code; these values are for tools that cannot read CSS variables."
         >
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {SWATCHES.map((s) => (
