@@ -15,6 +15,7 @@ bun install
 bun run dev        # http://localhost:3100
 bun run build      # production build to dist/
 bun run check      # vp check (lint + types)
+bun run test       # vitest run
 bun run format     # vp fmt
 ```
 
@@ -23,7 +24,7 @@ bun run format     # vp fmt
 The UI package is installed **from a git tag**, not npm:
 
 ```json
-"@ktbhealth/ui": "github:ktbhealth/ui#v0.1.0@react"
+"@ktbhealth/ui": "github:ktbhealth/ui#v0.1.3@react"
 ```
 
 The `@react` suffix selects the React build of the monorepo (`@vue` and

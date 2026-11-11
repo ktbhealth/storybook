@@ -26,6 +26,7 @@ const KTB_CUSTOM = new Set([
   "bubble",
   "code-block",
   "direction",
+  "job-status",
   "marker",
   "message",
   "message-scroller",

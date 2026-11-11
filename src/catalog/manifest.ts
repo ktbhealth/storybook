@@ -484,6 +484,16 @@ export const CATALOG: CatalogEntry[] = [
     loader: () => import("@ktbhealth/ui/components/label"),
   },
   {
+    id: "language-toggle",
+    name: "language-toggle",
+    family: "core",
+    label: "LanguageToggle",
+    exports: ["LanguageToggle"],
+    primary: "LanguageToggle",
+    importPath: "@ktbhealth/ui/components/language-toggle",
+    loader: () => import("@ktbhealth/ui/components/language-toggle"),
+  },
+  {
     id: "menubar",
     name: "menubar",
     family: "core",
@@ -896,6 +906,16 @@ export const CATALOG: CatalogEntry[] = [
     primary: "DirectionProvider",
     importPath: "@ktbhealth/ui/components/direction",
     loader: () => import("@ktbhealth/ui/components/direction"),
+  },
+  {
+    id: "job-status",
+    name: "job-status",
+    family: "ktb",
+    label: "JobStatus",
+    exports: ["JobItem", "JobList", "JobStatus", "JOB_STATUSES", "JOB_STATUS_LABELS"],
+    primary: "JobStatus",
+    importPath: "@ktbhealth/ui/components/job-status",
+    loader: () => import("@ktbhealth/ui/components/job-status"),
   },
   {
     id: "marker",

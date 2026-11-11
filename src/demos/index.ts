@@ -55,8 +55,12 @@ export const DEMOS: Record<string, ComponentType> = {
   "input-otp": lazy(() => import("./InputOtpDemo").then((m) => ({ default: m.InputOtpDemo }))),
   input: lazy(() => import("./InputDemo").then((m) => ({ default: m.InputDemo }))),
   item: lazy(() => import("./ItemDemo").then((m) => ({ default: m.ItemDemo }))),
+  "job-status": lazy(() => import("./JobStatusDemo").then((m) => ({ default: m.JobStatusDemo }))),
   kbd: lazy(() => import("./KbdDemo").then((m) => ({ default: m.KbdDemo }))),
   label: lazy(() => import("./LabelDemo").then((m) => ({ default: m.LabelDemo }))),
+  "language-toggle": lazy(() =>
+    import("./LanguageToggleDemo").then((m) => ({ default: m.LanguageToggleDemo })),
+  ),
   marker: lazy(() => import("./MarkerDemo").then((m) => ({ default: m.MarkerDemo }))),
   menubar: lazy(() => import("./MenubarDemo").then((m) => ({ default: m.MenubarDemo }))),
   message: lazy(() => import("./MessageDemo").then((m) => ({ default: m.MessageDemo }))),

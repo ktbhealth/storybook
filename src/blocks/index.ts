@@ -1,10 +1,13 @@
 import type { ComponentType } from "react";
 import { AppointmentCard } from "./AppointmentCard";
 import { ConsultationSummaryCard } from "./ConsultationSummaryCard";
+import { JobsBoard } from "./JobsBoard";
 import { PatientHeader } from "./PatientHeader";
 import { PatientList } from "./PatientList";
 import { PatientRecord } from "./PatientRecord";
 import { PatientRegistrationForm } from "./PatientRegistrationForm";
+import { PlatformConsole } from "./PlatformConsole";
+import { PlatformShell } from "./PlatformShell";
 import { QuickPatientCreate } from "./QuickPatientCreate";
 import { VisitHistoryRow } from "./VisitHistoryRow";
 
@@ -64,5 +67,23 @@ export const BLOCKS: BlockEntry[] = [
     title: "AppointmentCard",
     description: "Upcoming appointment card with provider and join action.",
     component: AppointmentCard,
+  },
+  {
+    id: "jobs-board",
+    title: "JobsBoard",
+    description: "Background job board with live statuses, progress and metadata.",
+    component: JobsBoard,
+  },
+  {
+    id: "platform-console",
+    title: "PlatformConsole",
+    description: "Full app shell dashboard with sidebar, stats, chart and table.",
+    component: PlatformConsole,
+  },
+  {
+    id: "platform-shell",
+    title: "PlatformShell",
+    description: "Inset-variant app shell chrome with grouped navigation.",
+    component: PlatformShell,
   },
 ];
