@@ -133,7 +133,7 @@ export function BrandPage() {
       <div className="space-y-10 px-8 py-8">
         <Section
           title="Logo"
-          description="The mark is the product icon: an open book with a medical cross. Use the regular lockup on light backgrounds and the inverse one on dark or brand-blue backgrounds."
+          description="The logo from the landing page header: the book-plus icon on a rounded tile in the primary color, next to the bold wordmark. Use the regular lockup on light backgrounds and the inverse one on dark or brand-blue backgrounds."
         >
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <LogoCard
@@ -209,10 +209,10 @@ export function BrandPage() {
 
         <Section
           title="Typography"
-          description="Geist for the wordmark and all UI text (the same font as the design system)."
+          description="Geist Bold with tight tracking for the wordmark; Geist for all UI text (the same font as the design system)."
         >
           <p className="text-3xl tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
-            <span className="font-bold">KTB</span> <span className="font-normal">Health</span>
+            <span className="font-bold tracking-tight">KTB Health</span>
           </p>
         </Section>
 
