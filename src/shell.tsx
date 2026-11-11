@@ -73,6 +73,7 @@ export function AppShell() {
           <SectionLabel>Get started</SectionLabel>
           <NavLink to="/">Overview</NavLink>
           <NavLink to="/tokens">Tokens</NavLink>
+          <NavLink to="/brand">Brand</NavLink>
           <NavLink to="/components">All components</NavLink>
           <NavLink to="/blocks">Blocks</NavLink>
 
