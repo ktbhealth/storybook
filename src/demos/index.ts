@@ -37,8 +37,14 @@ export const DEMOS: Record<string, ComponentType> = {
   ),
   combobox: lazy(() => import("./ComboboxDemo").then((m) => ({ default: m.ComboboxDemo }))),
   command: lazy(() => import("./CommandDemo").then((m) => ({ default: m.CommandDemo }))),
+  "confirm-dialog": lazy(() =>
+    import("./ConfirmDialogDemo").then((m) => ({ default: m.ConfirmDialogDemo })),
+  ),
   "context-menu": lazy(() =>
     import("./ContextMenuDemo").then((m) => ({ default: m.ContextMenuDemo })),
+  ),
+  "data-toolbar": lazy(() =>
+    import("./DataToolbarDemo").then((m) => ({ default: m.DataToolbarDemo })),
   ),
   dialog: lazy(() => import("./DialogDemo").then((m) => ({ default: m.DialogDemo }))),
   direction: lazy(() => import("./DirectionDemo").then((m) => ({ default: m.DirectionDemo }))),
@@ -73,7 +79,16 @@ export const DEMOS: Record<string, ComponentType> = {
   "navigation-menu": lazy(() =>
     import("./NavigationMenuDemo").then((m) => ({ default: m.NavigationMenuDemo })),
   ),
+  "page-container": lazy(() =>
+    import("./PageContainerDemo").then((m) => ({ default: m.PageContainerDemo })),
+  ),
+  "page-header": lazy(() =>
+    import("./PageHeaderDemo").then((m) => ({ default: m.PageHeaderDemo })),
+  ),
   pagination: lazy(() => import("./PaginationDemo").then((m) => ({ default: m.PaginationDemo }))),
+  "pagination-meta": lazy(() =>
+    import("./PaginationMetaDemo").then((m) => ({ default: m.PaginationMetaDemo })),
+  ),
   popover: lazy(() => import("./PopoverDemo").then((m) => ({ default: m.PopoverDemo }))),
   progress: lazy(() => import("./ProgressDemo").then((m) => ({ default: m.ProgressDemo }))),
   questionnaire: lazy(() =>
@@ -83,8 +98,14 @@ export const DEMOS: Record<string, ComponentType> = {
     import("./RadioGroupDemo").then((m) => ({ default: m.RadioGroupDemo })),
   ),
   resizable: lazy(() => import("./ResizableDemo").then((m) => ({ default: m.ResizableDemo }))),
+  "rich-text-editor": lazy(() =>
+    import("./RichTextEditorDemo").then((m) => ({ default: m.RichTextEditorDemo })),
+  ),
   "scroll-area": lazy(() =>
     import("./ScrollAreaDemo").then((m) => ({ default: m.ScrollAreaDemo })),
+  ),
+  "search-input": lazy(() =>
+    import("./SearchInputDemo").then((m) => ({ default: m.SearchInputDemo })),
   ),
   select: lazy(() => import("./SelectDemo").then((m) => ({ default: m.SelectDemo }))),
   separator: lazy(() => import("./SeparatorDemo").then((m) => ({ default: m.SeparatorDemo }))),
