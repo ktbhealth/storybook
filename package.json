@@ -22,7 +22,7 @@
     "infra:destroy": "cuora run --env prod --config cuora.toml -- alchemy destroy --stage prod -y"
   },
   "dependencies": {
-    "@ktbhealth/ui": "github:ktbhealth/ui#v0.3.1@react",
+    "@ktbhealth/ui": "github:ktbhealth/ui#v0.3.2@react",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "1.170.46",
     "lucide-react": "^0.544.0",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@alchemy.run/cloudflare": "2.0.0-beta.85",
     "@ktb/infra-cloudflare": "workspace:*",
+    "@ktbhealth/workspace": "github:ktbhealth/workspace#v0.1.2@eslint-config-arch",
     "@rive-app/react-webgl2": "4.38.1",
     "@testing-library/react": "^16",
     "@types/node": "^22.10.2",
