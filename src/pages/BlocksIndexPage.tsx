@@ -21,7 +21,7 @@ export function BlocksIndexPage() {
             <ComponentPreview Demo={b.component} className="h-56" />
             <div className="px-2 pb-1 pt-3">
               <div className="flex items-center gap-2">
-                <span className="rounded-full bg-amber-500/10 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-amber-600 uppercase dark:text-amber-400">
+                <span className="rounded-full bg-warning/10 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-warning uppercase">
                   WIP
                 </span>
                 <span className="truncate font-mono text-sm font-medium">{b.title}</span>

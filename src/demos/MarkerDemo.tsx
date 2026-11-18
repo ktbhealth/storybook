@@ -14,7 +14,7 @@ export function MarkerDemo() {
         </Marker>
         <Marker>
           <MarkerIcon>
-            <AlertTriangle className="text-amber-500" />
+            <AlertTriangle className="text-warning" />
           </MarkerIcon>
           <MarkerContent>Blood pressure above target — review medication.</MarkerContent>
         </Marker>
