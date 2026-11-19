@@ -5,7 +5,7 @@
     "": {
       "name": "@ktbhealth/storybook",
       "dependencies": {
-        "@ktbhealth/ui": "github:ktbhealth/ui#v0.3.2@react",
+        "@ktbhealth/ui": "github:ktbhealth/ui#v0.4.2@react",
         "@tailwindcss/vite": "^4.1.18",
         "@tanstack/react-router": "1.170.46",
         "lucide-react": "^0.544.0",
@@ -285,7 +285,7 @@
 
     "@ktb/infra-ports": ["@ktb/infra-ports@workspace:infra/ports"],
 
-    "@ktbhealth/ui": ["@ktbhealth/ui@github:ktbhealth/ui#c9463f6", { "dependencies": { "@base-ui/react": "^1.9.0", "@platejs/basic-nodes": "53.0.0", "@platejs/link": "53.3.5", "@platejs/list": "53.3.13", "@radix-ui/react-use-controllable-state": "^1.3.0", "@rive-app/react-webgl2": "^4.38.1", "@shadcn/react": "^0.3.1", "@streamdown/cjk": "^1.0.4", "@streamdown/code": "^2.0.0", "@streamdown/math": "^1.0.3", "@streamdown/mermaid": "^1.0.3", "@vueuse/core": "^15.0.0", "@xyflow/react": "^12.12.1", "ai": "^7.0.163", "ansi-to-react": "^6.2.6", "class-variance-authority": "^0.7.1", "clsx": "^2.1.1", "cmdk": "^1.1.1", "cn": "^0.5.2", "date-fns": "^4.4.0", "embla-carousel-react": "^8.6.0", "embla-carousel-vue": "^8.6.0", "input-otp": "^1.5.0", "lucide-react": "^0.544.0", "lucide-vue-next": "^1.0.0", "media-chrome": "^4.19.4", "motion": "^14.9.1", "nanoid": "^6.0.2", "platejs": "53.5.2", "react-day-picker": "^10.0.2", "react-jsx-parser": "^2.4.1", "react-resizable-panels": "^4.18.1", "recharts": "3.8.0", "reka-ui": "^2.11.0", "shadcn": "^4.23.0", "shiki": "^4.6.0", "streamdown": "^2.7.1", "tailwind-merge": "^3.7.0", "tailwindcss": "^4.3.5", "tokenlens": "^1.3.1", "tw-animate-css": "^1.4.0", "use-stick-to-bottom": "^1.1.6", "vue": "^3.5.0", "vue-sonner": "^2.0.9" }, "peerDependencies": { "react": "^19.0.0", "react-dom": "^19.0.0" }, "optionalPeers": ["react", "react-dom"] }, "ktbhealth-ui-c9463f6", "sha512-X6oKRvmScRBOlucEMqEwL0Dm9EvWnJeXL3/ywGQxeiP9ArwZueRIx+D5Ph3t5Jw16fEGuzc4/gD9xapMMgz3VA=="],
+    "@ktbhealth/ui": ["@ktbhealth/ui@github:ktbhealth/ui#c943234", { "dependencies": { "@base-ui/react": "^1.9.0", "@platejs/basic-nodes": "53.0.0", "@platejs/link": "53.3.5", "@platejs/list": "53.3.13", "@radix-ui/react-use-controllable-state": "^1.3.0", "@rive-app/react-webgl2": "^4.38.1", "@shadcn/react": "^0.3.1", "@streamdown/cjk": "^1.0.4", "@streamdown/code": "^2.0.0", "@streamdown/math": "^1.0.3", "@streamdown/mermaid": "^1.0.3", "@vueuse/core": "^15.0.0", "@xyflow/react": "^12.12.1", "ai": "^7.0.163", "ansi-to-react": "^6.2.6", "class-variance-authority": "^0.7.1", "clsx": "^2.1.1", "cmdk": "^1.1.1", "cn": "^0.5.2", "date-fns": "^4.4.0", "embla-carousel-react": "^8.6.0", "embla-carousel-vue": "^8.6.0", "input-otp": "^1.5.0", "lucide-react": "^0.544.0", "lucide-vue-next": "^1.0.0", "media-chrome": "^4.19.4", "motion": "^14.9.1", "nanoid": "^6.0.2", "platejs": "53.5.2", "react-colorful": "5.6.1", "react-day-picker": "^10.0.2", "react-jsx-parser": "^2.4.1", "react-resizable-panels": "^4.18.1", "recharts": "3.8.0", "reka-ui": "^2.11.0", "shadcn": "^4.23.0", "shiki": "^4.6.0", "streamdown": "^2.7.1", "tailwind-merge": "^3.7.0", "tailwindcss": "^4.3.5", "tokenlens": "^1.3.1", "tw-animate-css": "^1.4.0", "use-stick-to-bottom": "^1.1.6", "vue": "^3.5.0", "vue-sonner": "^2.0.9" }, "peerDependencies": { "react": "^19.0.0", "react-dom": "^19.0.0" }, "optionalPeers": ["react", "react-dom"] }, "ktbhealth-ui-c943234", "sha512-DAw+IBqzspOF9sKsh7hU91PARgxWwuYO1yJQqjePwl1oKN+4HT1z0ALJpQzPQcPIBrcwwMQvCHwOZ20pjF06pQ=="],
 
     "@ktbhealth/workspace": ["@ktbhealth/workspace@github:ktbhealth/workspace#229eaa3", {}, "ktbhealth-workspace-229eaa3", "sha512-e9dPLAL79PYWOkMeIiMp8IQgNlDg70TwGwgy+/rZwhYNqfi5Y3FiXPFAV0znkRcc4ecjQMAvGtqINMWPpi/uEg=="],
 
@@ -1536,6 +1536,8 @@
     "queue-microtask": ["queue-microtask@1.2.3", "", {}, "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="],
 
     "react": ["react@19.3.1", "", {}, "sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw=="],
+
+    "react-colorful": ["react-colorful@5.6.1", "", { "peerDependencies": { "react": ">=16.8.0", "react-dom": ">=16.8.0" } }, "sha512-1exovf0uGTGyq5mXQT0zgQ80uvj2PCwvF8zY1RN9/vbJVSjSo3fsB/4L3ObbF7u70NduSiK4xu4Y6q1MHoUGEw=="],
 
     "react-compiler-runtime": ["react-compiler-runtime@1.0.0", "", { "peerDependencies": { "react": "^17.0.0 || ^18.0.0 || ^19.0.0 || ^0.0.0-experimental" } }, "sha512-rRfjYv66HlG8896yPUDONgKzG5BxZD1nV9U6rkm+7VCuvQc903C4MjcoZR4zPw53IKSOX9wMQVpA1IAbRtzQ7w=="],
 

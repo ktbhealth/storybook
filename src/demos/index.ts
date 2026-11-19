@@ -32,6 +32,9 @@ export const DEMOS: Record<string, ComponentType> = {
   chart: lazy(() => import("./ChartDemo").then((m) => ({ default: m.ChartDemo }))),
   checkbox: lazy(() => import("./CheckboxDemo").then((m) => ({ default: m.CheckboxDemo }))),
   "code-block": lazy(() => import("./CodeBlockDemo").then((m) => ({ default: m.CodeBlockDemo }))),
+  "color-picker": lazy(() =>
+    import("./ColorPickerDemo").then((m) => ({ default: m.ColorPickerDemo })),
+  ),
   collapsible: lazy(() =>
     import("./CollapsibleDemo").then((m) => ({ default: m.CollapsibleDemo })),
   ),

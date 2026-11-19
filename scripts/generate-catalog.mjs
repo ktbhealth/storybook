@@ -25,6 +25,7 @@ const KTB_CUSTOM = new Set([
   "attachment",
   "bubble",
   "code-block",
+  "color-picker",
   "direction",
   "job-status",
   "marker",
