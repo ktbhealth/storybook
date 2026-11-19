@@ -968,6 +968,16 @@ export const CATALOG: CatalogEntry[] = [
     loader: () => import("@ktbhealth/ui/components/code-block"),
   },
   {
+    id: "color-picker",
+    name: "color-picker",
+    family: "ktb",
+    label: "ColorPicker",
+    exports: ["ColorPicker"],
+    primary: "ColorPicker",
+    importPath: "@ktbhealth/ui/components/color-picker",
+    loader: () => import("@ktbhealth/ui/components/color-picker"),
+  },
+  {
     id: "direction",
     name: "direction",
     family: "ktb",

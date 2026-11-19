@@ -22,7 +22,7 @@
     "infra:destroy": "cuora run --env prod --config cuora.toml -- alchemy destroy --stage prod -y"
   },
   "dependencies": {
-    "@ktbhealth/ui": "github:ktbhealth/ui#v0.3.2@react",
+    "@ktbhealth/ui": "github:ktbhealth/ui#v0.4.2@react",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "1.170.46",
     "lucide-react": "^0.544.0",
