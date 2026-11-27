@@ -3,18 +3,8 @@ import { Badge } from "@ktbhealth/ui/components/badge";
 import { Button } from "@ktbhealth/ui/components/button";
 import { Card } from "@ktbhealth/ui/components/card";
 import { ScrollArea } from "@ktbhealth/ui/components/scroll-area";
-import {
-  Sheet,
-  SheetContent,
-  SheetTitle,
-} from "@ktbhealth/ui/components/sheet";
-import {
-  ArrowLeft,
-  ChevronRight,
-  Cpu,
-  History,
-  Sparkles,
-} from "lucide-react";
+import { Sheet, SheetContent, SheetTitle } from "@ktbhealth/ui/components/sheet";
+import { ArrowLeft, ChevronRight, Cpu, History, Sparkles } from "lucide-react";
 import { useState } from "react";
 import {
   AnamnesisPanelContent,
@@ -28,9 +18,7 @@ function WorkspaceHeader() {
   return (
     <header className="flex h-12 shrink-0 items-center justify-between border-b px-5">
       <div className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
-        <span className="cursor-pointer transition-colors hover:text-foreground">
-          Consultas
-        </span>
+        <span className="cursor-pointer transition-colors hover:text-foreground">Consultas</span>
         <ChevronRight className="size-2.5" />
         <span className="font-medium text-foreground">Luís Fernando Silva</span>
         <Badge
@@ -128,10 +116,7 @@ export function ConsultationWorkspace() {
       </div>
 
       <Sheet open={anamnesisOpen} onOpenChange={setAnamnesisOpen}>
-        <SheetContent
-          side="right"
-          className="w-full gap-0 p-0 sm:max-w-[540px]"
-        >
+        <SheetContent side="right" className="w-full gap-0 p-0 sm:max-w-[540px]">
           <SheetTitle className="sr-only">Anamnese Estruturada por IA</SheetTitle>
           <AnamnesisPanelHeader onClose={() => setAnamnesisOpen(false)} />
           <ScrollArea className="min-h-0 flex-1">

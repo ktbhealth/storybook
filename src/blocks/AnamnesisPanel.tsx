@@ -62,8 +62,8 @@ export function AnamnesisPanelContent() {
 
       <AnamnesisSection title="Queixa Principal" status={<ConfirmedStatus />}>
         <p className="text-foreground">
-          Dor progressiva em região de quadril e lombar há aproximadamente 3
-          semanas, exacerbada após agachamentos e caminhadas.
+          Dor progressiva em região de quadril e lombar há aproximadamente 3 semanas, exacerbada
+          após agachamentos e caminhadas.
         </p>
       </AnamnesisSection>
 
@@ -72,15 +72,14 @@ export function AnamnesisPanelContent() {
         status={<ConfirmedStatus label="98% Confiança" />}
       >
         <p className="mb-2.5 text-foreground">
-          Paciente relata início há 3 semanas na pelve e quadril, com irradiação
-          ascendente até a transição cervicotorácica.
+          Paciente relata início há 3 semanas na pelve e quadril, com irradiação ascendente até a
+          transição cervicotorácica.
         </p>
         <div className="flex items-start gap-2 rounded-lg border border-warning/25 bg-warning/10 p-2.5">
           <TriangleAlert className="mt-0.5 size-3.5 shrink-0 text-warning" />
           <p className="text-[11px] leading-relaxed">
             <strong className="font-semibold text-warning">Fator Relevante: </strong>
-            Uso de palmilha ortopédica recente não prescrita, com desnível
-            acentuado relatado.
+            Uso de palmilha ortopédica recente não prescrita, com desnível acentuado relatado.
           </p>
         </div>
       </AnamnesisSection>
@@ -103,8 +102,7 @@ export function AnamnesisPanelContent() {
           <li className="flex items-center gap-2">
             <CircleDot className="size-2 text-primary" />
             <span>
-              <strong>M79.1:</strong> Síndrome Miofascial com sobrecarga postural
-              secundária.
+              <strong>M79.1:</strong> Síndrome Miofascial com sobrecarga postural secundária.
             </span>
           </li>
         </ul>
@@ -136,9 +134,7 @@ export function AnamnesisPanelHeader({ onClose }: { onClose?: () => void }) {
         <span className="flex size-6 items-center justify-center rounded-lg border border-primary/30 bg-primary/10 text-primary">
           <Sparkles className="size-3" />
         </span>
-        <h2 className="text-xs font-bold tracking-wider uppercase">
-          Anamnese Estruturada por IA
-        </h2>
+        <h2 className="text-xs font-bold tracking-wider uppercase">Anamnese Estruturada por IA</h2>
       </div>
       <div className="flex items-center gap-2">
         <Button size="sm" className="h-7 gap-1.5 text-[11px]">

@@ -12,6 +12,9 @@ export const DEMOS: Record<string, ComponentType> = {
     import("./AlertDialogDemo").then((m) => ({ default: m.AlertDialogDemo })),
   ),
   alert: lazy(() => import("./AlertDemo").then((m) => ({ default: m.AlertDemo }))),
+  "anamnesis-review": lazy(() =>
+    import("./AnamnesisReviewDemo").then((m) => ({ default: m.AnamnesisReviewDemo })),
+  ),
   "app-dialog": lazy(() => import("./AppDialogDemo").then((m) => ({ default: m.AppDialogDemo }))),
   "app-toast": lazy(() => import("./AppToastDemo").then((m) => ({ default: m.AppToastDemo }))),
   "aspect-ratio": lazy(() =>
@@ -70,6 +73,9 @@ export const DEMOS: Record<string, ComponentType> = {
   "language-toggle": lazy(() =>
     import("./LanguageToggleDemo").then((m) => ({ default: m.LanguageToggleDemo })),
   ),
+  "live-consultation": lazy(() =>
+    import("./LiveConsultationDemo").then((m) => ({ default: m.LiveConsultationDemo })),
+  ),
   marker: lazy(() => import("./MarkerDemo").then((m) => ({ default: m.MarkerDemo }))),
   menubar: lazy(() => import("./MenubarDemo").then((m) => ({ default: m.MenubarDemo }))),
   message: lazy(() => import("./MessageDemo").then((m) => ({ default: m.MessageDemo }))),
@@ -93,6 +99,9 @@ export const DEMOS: Record<string, ComponentType> = {
     import("./PaginationMetaDemo").then((m) => ({ default: m.PaginationMetaDemo })),
   ),
   popover: lazy(() => import("./PopoverDemo").then((m) => ({ default: m.PopoverDemo }))),
+  "preconsultation-room": lazy(() =>
+    import("./PreconsultationRoomDemo").then((m) => ({ default: m.PreconsultationRoomDemo })),
+  ),
   progress: lazy(() => import("./ProgressDemo").then((m) => ({ default: m.ProgressDemo }))),
   questionnaire: lazy(() =>
     import("./QuestionnaireDemo").then((m) => ({ default: m.QuestionnaireDemo })),
@@ -126,6 +135,9 @@ export const DEMOS: Record<string, ComponentType> = {
   toggle: lazy(() => import("./ToggleDemo").then((m) => ({ default: m.ToggleDemo }))),
   tooltip: lazy(() => import("./TooltipDemo").then((m) => ({ default: m.TooltipDemo }))),
   trace: lazy(() => import("./TraceDemo").then((m) => ({ default: m.TraceDemo }))),
+  "transcript-review": lazy(() =>
+    import("./TranscriptReviewDemo").then((m) => ({ default: m.TranscriptReviewDemo })),
+  ),
   turnstile: lazy(() => import("./TurnstileDemo").then((m) => ({ default: m.TurnstileDemo }))),
   "ai-elements/agent": lazy(() =>
     import("./AiAgentDemo").then((m) => ({ default: m.AiAgentDemo })),

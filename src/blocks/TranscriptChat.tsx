@@ -11,13 +11,7 @@ import {
 import { Card } from "@ktbhealth/ui/components/card";
 import { ScrollArea } from "@ktbhealth/ui/components/scroll-area";
 import { cn } from "@ktbhealth/ui/lib/utils";
-import {
-  Check,
-  Copy,
-  Download,
-  Lock,
-  Pause,
-} from "lucide-react";
+import { Check, Copy, Download, Lock, Pause } from "lucide-react";
 import type { ReactNode } from "react";
 
 /**
@@ -86,10 +80,7 @@ export function TranscriptChatRow({ turn }: { turn: TranscriptTurn }) {
                     {p.text}
                   </p>
                 ) : (
-                  <div
-                    key={i}
-                    className="flex items-start gap-2 border-t border-border/50 pt-2"
-                  >
+                  <div key={i} className="flex items-start gap-2 border-t border-border/50 pt-2">
                     <span className="mt-0.5 font-mono text-[10px] text-muted-foreground tabular-nums">
                       {p.time}
                     </span>
