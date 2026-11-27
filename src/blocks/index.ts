@@ -1,6 +1,8 @@
 import type { ComponentType } from "react";
+import { AnamnesisPanel } from "./AnamnesisPanel";
 import { AppointmentCard } from "./AppointmentCard";
 import { ConsultationSummaryCard } from "./ConsultationSummaryCard";
+import { ConsultationWorkspace } from "./ConsultationWorkspace";
 import { JobsBoard } from "./JobsBoard";
 import { PatientHeader } from "./PatientHeader";
 import { PatientList } from "./PatientList";
@@ -9,6 +11,7 @@ import { PatientRegistrationForm } from "./PatientRegistrationForm";
 import { PlatformConsole } from "./PlatformConsole";
 import { PlatformShell } from "./PlatformShell";
 import { QuickPatientCreate } from "./QuickPatientCreate";
+import { TranscriptChat } from "./TranscriptChat";
 import { VisitHistoryRow } from "./VisitHistoryRow";
 
 export interface BlockEntry {
@@ -20,6 +23,27 @@ export interface BlockEntry {
 
 /** WIP example blocks composed from @ktbhealth/ui components. */
 export const BLOCKS: BlockEntry[] = [
+  {
+    id: "consultation-workspace",
+    title: "ConsultationWorkspace",
+    description:
+      "Full capture workspace: patient context bar, live diarized transcript as chat turns, and the AI anamnesis drawer.",
+    component: ConsultationWorkspace,
+  },
+  {
+    id: "transcript-chat",
+    title: "TranscriptChat",
+    description:
+      "Diarized transcript panel — speaker turns as chat bubbles with stamped paragraphs, recording cluster, LGPD note.",
+    component: TranscriptChat,
+  },
+  {
+    id: "anamnesis-panel",
+    title: "AnamnesisPanel",
+    description:
+      "AI-structured anamnesis sections with confidence status, risk factor, CID hypotheses and conduct checklist.",
+    component: AnamnesisPanel,
+  },
   {
     id: "patient-header",
     title: "PatientHeader",
