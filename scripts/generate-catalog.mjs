@@ -20,6 +20,7 @@ const OUT = new URL("../src/catalog/manifest.ts", import.meta.url).pathname;
 
 /** Top-level files that are KTB custom (not part of the default shadcn set). */
 const KTB_CUSTOM = new Set([
+  "anamnesis-review",
   "app-dialog",
   "app-toast",
   "attachment",
@@ -28,12 +29,15 @@ const KTB_CUSTOM = new Set([
   "color-picker",
   "direction",
   "job-status",
+  "live-consultation",
   "marker",
   "message",
   "message-scroller",
   "native-select",
+  "preconsultation-room",
   "questionnaire",
   "trace",
+  "transcript-review",
   "turnstile",
 ]);
 
